@@ -1,6 +1,6 @@
 @extends('layouts.app')
     @section('title')
-        available productions
+        registered members
     @endsection
     @section('content')
     <table class="table" style="color: black;">
@@ -8,11 +8,13 @@
             <tr>
                 <th>S/N</th>
                 <th>NAME</th>
-                <th>QUANTITY</th>
-                <th>PRICE</th>
-                <th><button data-toggle="modal" data-target="#addProduction" class="btn custom-btn"><b>+</b></button></th>
+                <th>EMAIL</th>
+                <th>PHONE NUMBER</th>
+                <th>ADDRESS</th>
+                <th>TOTAL PENSION FUNDS</th>
+                <th>PENSHION SCHEME</th>
+                <th><a href="{{route('member.create')}}"><b><i class="fas fa-user"></i> Member</b></a></th>
             </tr>
-            @include('production.create')
         </thead>
         <tbody>
             @foreach($productions as $production)

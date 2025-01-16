@@ -1,15 +1,40 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
+@section('title')
+    dashboard
+@endsection
+
+@section('content')
+    <div class="p-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+            <div class="row my-4">
+              <div class="col-md-3 text-center">
+                <a href="" class="btn btn-outline-success w-100 py-4">
+                  <i class="fas fa-user fa-2x mb-2"></i>
+                  <h5>Members</h5>
+                </a>
+              </div>
+              <div class="col-md-3 text-center">
+                <a href="" class="btn btn-outline-success w-100 py-4">
+                  <i class="fas fa-truck fa-2x mb-2"></i>
+                  <h5>Pension Scheme</h5>
+                </a>
+              </div>
+            <div class="col-md-3 text-center">
+              <a href="" class="btn btn-outline-success w-100 py-4">
+                <i class="fas fa-road fa-2x mb-2"></i>
+                <h5>Pension Funds</h5>
+              </a>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="" class="btn btn-outline-success w-100 py-4">
+                <i class="fas fa-briefcase fa-2x mb-2"></i>
+                <h5>Payouts</h5>
+              </a>
+            </div>
+          </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
