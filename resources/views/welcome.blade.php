@@ -11,10 +11,10 @@
     <style>
         body {
             background-color: #f8fdf8; /* Light green background */
-            color: #0d6a0d; /* Dark green text */
+            color: #5bba79; /* Dark green text */
         }
         .navbar {
-            background-color: #0d6a0d; /* Dark green navbar */
+            background-color: #5bba79; /* Dark green navbar */
         }
         .navbar-brand, .nav-link {
             color: white !important;
@@ -31,7 +31,7 @@
             font-weight: bold;
         }
         .btn-green {
-            background-color: #0d6a0d;
+            background-color: #5bba79;
             color: white;
             border: none;
         }
@@ -40,10 +40,10 @@
         }
         .feature-icon {
             font-size: 3rem;
-            color: #0d6a0d;
+            color: #5bba79;
         }
         a:focus, button:focus {
-            outline: 2px solid #0d6a0d; /* Green outline for focused elements */
+            outline: 2px solid #5bba79; /* Green outline for focused elements */
             outline-offset: 2px;
         }
 
@@ -59,16 +59,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="container">
+    <div class="containers" style="background-color: white;">
         <div class="row justify-content-center">
-            <div class="col-lg-12 text-center" style="height: 400px; padding-top: 150px;">
-                <h1>Welcome to the Pension Management System</h1>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+            <img src="{{asset('images/welcome.png')}}" alt="">
+            </div>
+            <div class="col-md-5 text-left" style="height: 400px; padding-top: 150px;">
+                <h1>Sokoto South, Pension Management System</h1>
                 <p class="lead mt-3">Secure your future with ease and transparency. Manage contributions, track funds, and access benefits all in one place.</p>
                 <div class="mt-4">
                     <a href="#" class="btn btn-green btn-lg"><i class="fas fa-sign-in-alt"></i> Login</a>
                     <a href="#" class="btn btn-outline-green btn-lg"><i class="fas fa-user-plus"></i> Register</a>
                 </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 
@@ -100,7 +105,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center py-3 mt-5" style="background-color: #0d6a0d; color: white;">
+    <footer class="text-center py-3 mt-5" style="background-color: #5bba79; color: white;">
         <p>&copy; 2025 Pension Management System. All Rights Reserved.</p>
     </footer>
 
