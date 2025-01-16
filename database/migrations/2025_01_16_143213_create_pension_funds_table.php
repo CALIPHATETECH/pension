@@ -17,6 +17,7 @@ class CreatePensionFundsTable extends Migration
             $table->id();
             $table->foreignId('member_id');
             $table->string('amount');
+            $table->string('salary');
             $table->timestamps();
         });
     }

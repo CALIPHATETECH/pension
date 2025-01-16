@@ -65,11 +65,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('member.index')}}">Members</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Employee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Salary</a>
+                        <a class="nav-link" href="{{route('salary.index')}}">Salary</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>

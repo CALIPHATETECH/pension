@@ -28,4 +28,23 @@ class Member extends Model
     {
         return $this->belongsTo(Contribution::class);
     }
+
+    public function pensionAmount()
+    {
+        return ($this->salary/100) * $this->contribution->percentage;
+    }
+
+    public function salaryAmount()
+    {
+        return $this->salary - $this->pensionAmount();
+    }
+
+    public function totalPensionFunds()
+    {
+        $funds = 0;
+        foreach($this->pensionFunds as $pensionFund){
+            $funds += $pensionFund->amount;
+        }
+        return $funds;
+    }
 }

@@ -33,6 +33,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         Route::get('/{memberId}/delete', 'MemberController@delete')->name('delete');        
     });
 
+    Route::name('salary.')
+    ->prefix('/salary')
+    ->group(function (){
+        Route::get('/', 'SalaryController@index')->name('index');    
+        Route::get('/pay', 'SalaryController@pay')->name('pay');    
+    });
+
     
     
 });

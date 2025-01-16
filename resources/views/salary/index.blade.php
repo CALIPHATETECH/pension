@@ -3,6 +3,7 @@
         registered members
     @endsection
     @section('content')
+    <p class="h4 p-4"> Staff Salary Page</p>
     <table class="table" style="color: black;">
         <thead>
             <tr>
@@ -11,9 +12,9 @@
                 <th>EMAIL</th>
                 <th>PHONE NUMBER</th>
                 <th>ADDRESS</th>
+                <th>SALARY</th>
                 <th>TOTAL PENSION FUNDS</th>
-                <th>PENSHION SCHEME</th>
-                <th><a href="{{route('member.create')}}" class="btn btn-success"><b><i class="fas fa-user"></i> Member</b></a></th>
+                <th><a href="{{route('salary.pay')}}" class="btn btn-success"><b><i class="fas fa-check"></i> Authorize Payment</b></a></th>
             </tr>
         </thead>
         <tbody>
@@ -24,11 +25,10 @@
                     <td>{{$member->employee->user->email ?? ''}}</td>
                     <td>{{$member->employee->phone ?? ''}}</td>
                     <td>{{$member->employee->address ?? ''}}</td>
-                    <td>{{number_format($member->totalPensionFunds(), 2)}}</td>
-                    <td>{{$member->contribution->name}}</a></td>
+                    <td>{{$member->salary}}</a></td>
+                    <td>{{number_format($member->totalPensionFunds(), 2)}}</a></td>
                     <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#edit_{{$member->id}}">Edit</button>
-                        <a href="{{route('member.delete',[$member->id])}}" onclick="return confirm('Are you sure, you want to delete this member?')"><button class="btn btn-danger">Delete</button></a>
+                        
                     </td>
                 </tr>
             @endforeach
