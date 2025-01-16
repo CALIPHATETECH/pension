@@ -60,10 +60,6 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function member()
-    {
-        return $this->hasOne(Member::class);
-    }
 
     public function employee()
     {

@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <div class="row my-4">
               <div class="col-md-3 text-center">
-                <a href="" class="btn btn-outline-success w-100 py-4">
+                <a href="{{route('member.index')}}" class="btn btn-outline-success w-100 py-4">
                   <i class="fas fa-user fa-2x mb-2"></i>
                   <h5>Members</h5>
                 </a>

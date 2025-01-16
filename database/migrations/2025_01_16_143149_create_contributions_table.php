@@ -19,6 +19,14 @@ class CreateContributionsTable extends Migration
             $table->integer('percentage');
             $table->timestamps();
         });
+
+        $conts = [
+            ['name'=>'Pension', 'percentage'=> 10],
+            ['name'=>'Contribution', 'percentage'=>5]
+        ];
+        foreach($conts as $cont){
+            App\Models\Contribution::firstOrCreate($cont);
+        }
     }
 
     /**

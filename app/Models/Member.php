@@ -9,9 +9,9 @@ class Member extends Model
 {
     protected $guarded = [];
 
-    public function user()
+    public function employee()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function pensionFunds()
@@ -26,6 +26,6 @@ class Member extends Model
 
     public function contribution()
     {
-        return $this->hasOne(Contribution::class);
+        return $this->belongsTo(Contribution::class);
     }
 }

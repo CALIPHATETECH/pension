@@ -15,7 +15,6 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
             $table->foreignId('employee_id');
             $table->string('date_of_birth');
             $table->string('date_enrolled');

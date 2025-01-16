@@ -27,6 +27,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     ->prefix('/member')
     ->group(function (){
         Route::get('/', 'MemberController@index')->name('index');    
+        Route::get('/create', 'MemberController@create')->name('create');    
         Route::post('/register', 'MemberController@register')->name('register');    
         Route::post('/{memberId}/update', 'MemberController@update')->name('update');    
         Route::get('/{memberId}/delete', 'MemberController@delete')->name('delete');        
