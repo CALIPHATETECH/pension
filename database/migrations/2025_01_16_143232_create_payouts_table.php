@@ -17,7 +17,7 @@ class CreatePayoutsTable extends Migration
             $table->id();
             $table->foreignId('member_id');
             $table->string('amount');
-            $date->string('date');
+            $table->string('date');
             $table->timestamps();
         });
     }

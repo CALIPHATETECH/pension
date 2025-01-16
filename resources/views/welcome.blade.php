@@ -69,8 +69,8 @@
                 <h1>Sokoto South, Pension Management System</h1>
                 <p class="lead mt-3">Secure your future with ease and transparency. Manage contributions, track funds, and access benefits all in one place.</p>
                 <div class="mt-4">
-                    <a href="#" class="btn btn-green btn-lg"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    <a href="#" class="btn btn-outline-green btn-lg"><i class="fas fa-user-plus"></i> Register</a>
+                    <a href="{{route('login')}}" class="btn btn-green btn-lg"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="{{route('register')}}" class="btn btn-outline-green btn-lg"><i class="fas fa-user-plus"></i> Register</a>
                 </div>
             </div>
             <div class="col-md-1"></div>
