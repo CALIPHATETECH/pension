@@ -28,7 +28,6 @@ class User extends Authenticatable
         'email',
         'password',        
 		'role',
-
     ];
 
     /**
@@ -60,4 +59,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function member()
+    {
+        return $this->hasOne(Member::class);
+    }
+
+    public function employee()
+    {
+        return $this->hasOne(employee::class);
+    }
 }

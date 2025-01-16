@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contribution extends Model
 {
-    use HasFactory;
+    protected $guarded = [];
+
+    public function members()
+    {
+        return $this->hasMany(Member::class);
+    }
 }

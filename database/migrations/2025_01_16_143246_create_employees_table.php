@@ -17,6 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('department');
+            $table->string('staff_id');
             $table->string('address');
             $table->string('phone');
             $table->timestamps();
