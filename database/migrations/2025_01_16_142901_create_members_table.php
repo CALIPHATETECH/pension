@@ -18,6 +18,7 @@ class CreateMembersTable extends Migration
             $table->foreignId('employee_id');
             $table->string('date_of_birth');
             $table->string('date_enrolled');
+            $table->string('grade_level_id');
             $table->string('salary');
             $table->string('contribution_id');
             $table->string('status')->default(1);

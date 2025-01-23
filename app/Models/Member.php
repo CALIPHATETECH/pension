@@ -29,6 +29,11 @@ class Member extends Model
         return $this->belongsTo(Contribution::class);
     }
 
+    public function gradeLevel()
+    {
+        return $this->belongsTo(GradeLevel::class);
+    }
+
     public function pensionAmount()
     {
         return ($this->salary/100) * $this->contribution->percentage;
