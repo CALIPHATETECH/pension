@@ -18,4 +18,9 @@ class MinimumWagesGradeLevel extends Model
     {
         return $this->belongsTo(GradeLevel::class);
     }
+
+    public function getPercentageof($amount)
+    {
+        return ($amount/100) * $this->minimumWage->percentage;
+    }
 }

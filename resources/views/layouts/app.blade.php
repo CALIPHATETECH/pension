@@ -73,7 +73,7 @@
                         <a class="nav-link" href="{{route('salary.index')}}">Grade Levels</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('salary.index')}}">Minimum Wages</a>
+                        <a class="nav-link" href="{{route('wages.index')}}">Minimum Wages</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit(); ">Logout</a>

@@ -40,6 +40,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         Route::get('/pay', 'SalaryController@pay')->name('pay');    
     });
 
+    Route::name('wages.')
+    ->prefix('/wages')
+    ->group(function (){
+        Route::get('/', 'MinimumWagesController@index')->name('index');    
+        Route::get('/create', 'MinimumWagesController@create')->name('create');    
+        Route::post('/register', 'MinimumWagesController@register')->name('register');    
+    });
+
     
     
 });

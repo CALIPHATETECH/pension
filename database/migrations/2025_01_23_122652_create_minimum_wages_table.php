@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMinimunWagesTable extends Migration
+class CreateMinimumWagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateMinimunWagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('minimun_wages', function (Blueprint $table) {
+        Schema::create('minimum_wages', function (Blueprint $table) {
             $table->id();
-            $table->string('pecentage');
+            $table->string('percentage');
             $table->string('date');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateMinimunWagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('minimun_wages');
+        Schema::dropIfExists('minimum_wages');
     }
 }

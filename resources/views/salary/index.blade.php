@@ -25,7 +25,7 @@
                     <td>{{$member->employee->user->email ?? ''}}</td>
                     <td>{{$member->employee->phone ?? ''}}</td>
                     <td>{{$member->employee->address ?? ''}}</td>
-                    <td>{{$member->salary}}</a></td>
+                    <td>{{$member->currentSalary()}}</a></td>
                     <td>{{number_format($member->totalPensionFunds(), 2)}}</a></td>
                     <td>
                         

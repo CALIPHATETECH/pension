@@ -15,37 +15,55 @@
             <div class="col-md-4">
                 
                 <div class="form-group pt-2">
+                    <label for="">Full Name</label>
                     <input type="text" class="input-group form-control" placeholder="Full Name" value="{{old('name')}}" name="name">
                 </div>
                 
                 <div class="form-group pt-2">
+                <label for="">E-mail Address</label>
                     <input type="email" class="input-group form-control" placeholder="E-mail Address" value="{{old('email')}}" name="email">
                 </div>
                 
                 <div class="form-group pt-2">
+                <label for="">Phone Number</label>
                     <input type="number" class="input-group form-control" placeholder="Phone Number" value="{{old('phone')}}" name="phone">
                 </div>
 
                 <div class="form-group pt-2">
+                    <label for="">Date of Birth</label>
                     <input type="date" class="input-group form-control" placeholder="Date of Birth" value="{{old('date_of_birth')}}" name="date_of_birth">
                 </div>
 
                 <div class="form-group pt-2">
+                    <label for="">Address</label>
                     <textarea name="address" id="" cols="30" placeholder="Address" rows="2" class="input-group form-control">{{old('address')}}</textarea>
                 </div>
 
                 <div class="form-group pt-2">
+                <label for="">Password</label>
                     <input type="password" class="input-group form-control" placeholder="Password" value="{{old('password')}}" name="password">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group pt-2">
+                <label for="">Staff ID</label>
                     <input type="text" class="input-group form-control" placeholder="staff ID" value="{{old('staffID')}}" name="staffID">
                 </div>
+                <div class="form-group pt-2 ">
+                    <label for="">Grade Level</label>
+                    <select name="grade_level_id" id="" class="input-group form-control">
+                        <option value="">Select Level</option>
+                        @foreach(App\Models\GradeLevel::all() as $level)
+                        <option value="{{$level->id}}">{{$level->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="form-group pt-2">
+                    <label for="">Basic Salary</label>
                     <input type="number" class="input-group form-control" placeholder="Salary" value="{{old('salary')}}" name="salary">
                 </div>
                 <div class="form-group pt-2">
+                    <label for="">Date of Appointment</label>
                     <input type="date" class="input-group form-control" placeholder="Date Enrolled" value="{{old('date_enrolled')}}" name="date_enrolled">
                 </div>
                 <div class="form-group pt-2 ">

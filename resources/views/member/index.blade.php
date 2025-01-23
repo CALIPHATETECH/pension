@@ -11,6 +11,7 @@
                 <th>EMAIL</th>
                 <th>PHONE NUMBER</th>
                 <th>ADDRESS</th>
+                <th>GRADE LEVEL</th>
                 <th>TOTAL PENSION FUNDS</th>
                 <th>PENSHION SCHEME</th>
                 <th><a href="{{route('member.create')}}" class="btn btn-success"><b><i class="fas fa-user"></i> Member</b></a></th>
@@ -24,6 +25,7 @@
                     <td>{{$member->employee->user->email ?? ''}}</td>
                     <td>{{$member->employee->phone ?? ''}}</td>
                     <td>{{$member->employee->address ?? ''}}</td>
+                    <td>{{$member->gradeLevel->name ?? ''}}</td>
                     <td>{{number_format($member->totalPensionFunds(), 2)}}</td>
                     <td>{{$member->contribution->name}}</a></td>
                     <td>

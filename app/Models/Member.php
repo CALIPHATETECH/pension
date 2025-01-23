@@ -29,6 +29,15 @@ class Member extends Model
         return $this->belongsTo(Contribution::class);
     }
 
+    public function currentSalary()
+    {
+        $amount = $this->salary;
+        foreach($this->gradeLevel->minimumWagesGradeLevels as $levelWages){
+            $amount += $levelWages->getPercentageof($amount);
+        }
+        return $amount;
+    }
+
     public function gradeLevel()
     {
         return $this->belongsTo(GradeLevel::class);
@@ -36,7 +45,7 @@ class Member extends Model
 
     public function pensionAmount()
     {
-        return ($this->salary/100) * $this->contribution->percentage;
+        return ($this->currentSalary()/100) * $this->contribution->percentage;
     }
 
     public function salaryAmount()

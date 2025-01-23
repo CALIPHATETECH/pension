@@ -54,6 +54,7 @@ class MemberController extends Controller
             'date_enrolled'=>$request->date_enrolled,
             'salary'=>$request->salary,
             'contribution_id'=>$request->contribution_id,
+            'grade_level_id'=>$request->grade_level_id,
         ]);
 
         return redirect()->route('member.index')->withSuccess('Member Registered');
